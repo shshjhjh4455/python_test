@@ -1,0 +1,29 @@
+<!-- javascript 반복문을 사용해 다음 그림과 같이 패턴을 출력하는 프로그램을 작성하시오. 반복문을 이중으로 사용합니다.
+*
+**
+***
+****
+*****
+****** -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        window.onload = function () {
+            var str = "";
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j <= i; j++) {
+                    str += "*";
+                }
+                str += "<br>";
+            }
+            document.write(str);
+        }
+    </script>
+</head>
+
+</html>

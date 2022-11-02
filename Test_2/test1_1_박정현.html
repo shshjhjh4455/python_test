@@ -1,0 +1,31 @@
+<!-- - table 태그, th 태그, td 태그로 구조를 잡고, 내부에 글자와 input 태그를 넣습니다.
+   - 아이디와 비밀번호를 전송하는 방식은 post로 설정하고 전송데이터 처리 서버컴포넌트는 login으로 설정하며, 전송되는 아이디와 비밀번호 파라미터명은 userid와 userpwd로 선언합니다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <form action="login" method="post">
+        <table>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="userid"></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="userpwd"></td>
+            </tr>
+            <!-- 오른쪽으로 위치 -->
+            <tr>
+                <td colspan="2" align="left">
+                    <input type="submit" value="로그인">
+                </td>
+        </table>
+    </form>
+
+</html>

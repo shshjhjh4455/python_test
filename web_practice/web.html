@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first html</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        // 정수를 입력받아서 짝수 홀수 출력하는 javascript 프로그램
+        function check() {
+            var num = document.getElementById("num").value;
+            if (num % 2 == 0) {
+                alert("짝수");
+            } else {
+                alert("홀수");
+            }
+        }
+        // 사용자로 부터 1~100 사이의 점수를 입력받아서 A(>=90), B(>=80), C(>=70), D(>=60), F(<60) 등급을 판별하는 웹 어플리케이션을 if 조건문을 사용하여 자바스트립트로 구현하시오
+        function grade() {
+            var score = document.getElementById("score").value;
+            if (score >= 90) {
+                alert("A");
+            } else if (score >= 80) {
+                alert("B");
+            } else if (score >= 70) {
+                alert("C");
+            } else if (score >= 60) {
+                alert("D");
+            } else {
+                alert("F");
+            }
+        }
+
+        // 사용자로 부터 1~100 사이의 점수를 입력받아서 A(>=90), B(>=80), C(>=70), D(>=60), F(<60) 등급을 판별하는 웹 어플리케이션을 switch 구문을 사용하여 자바스트립트로 구현하시오
+        function grade2() {
+            var score = document.getElementById("score2").value;
+            switch (true) {
+                case (score >= 90):
+                    alert("A");
+                    break;
+                case (score >= 80):
+                    alert("B");
+                    break;
+                case (score >= 70):
+                    alert("C");
+                    break;
+                case (score >= 60):
+                    alert("D");
+                    break;
+                case (score < 60):
+                    alert("F");
+                    break;
+            }
+        }
+
+        // 정수를 입력받고, 입력받은 정수의 약수들과 약수의 합을 모두 출력하는 자바스크립트 프로그램을 작성하시오
+        function divisor() {
+            var num = document.getElementById("num2").value;
+            var sum = 0;
+            var result = "";
+            for (var i = 1; i <= num; i++) {
+                if (num % i == 0) {
+                    result += i + " ";
+                    sum += i;
+                }
+            }
+            alert(result + "약수의 합 : " + sum);
+        }
+
+        //정수를 입력받아서 양수, 음수, 0, 수치데이터가 아님을 판별하는 코드 구현하기, if문 사용
+        function check2() {
+            var num = document.getElementById("num3").value;
+            if (num > 0) {
+                alert("양수");
+            } else if (num < 0) {
+                alert("음수");
+            } else if (num == 0) {
+                alert("0");
+            } else {
+                alert("수치데이터가 아님");
+            }
+        }
+
+        //정수를 입력받아서 양수, 음수, 0, 수치데이터가 아님을 판별하는 코드 구현하기, switch문 사용
+        function check3() {
+            var num = document.getElementById("num4").value;
+            switch (true) {
+                case (num > 0):
+                    alert("양수");
+                    break;
+                case (num < 0):
+                    alert("음수");
+                    break;
+                case (num == 0):
+                    alert("0");
+                    break;
+                default:
+                    alert("수치데이터가 아님");
+                    break;
+            }
+        }
+
+        // Math.random() 함수를 이용하여 1~100 사이의 랜덤한 정수를 생성하고, 사용자로부터 정수를 입력받아서 랜덤한 정수와 비교하여 더 큰 수를 출력하는 프로그램을 작성하시오
+        function random() {
+            var num = document.getElementById("num5").value;
+            var random = Math.floor(Math.random() * 100) + 1;
+            if (num > random) {
+                alert("입력한 정수가 더 큽니다");
+            } else if (num < random) {
+                alert("랜덤한 정수가 더 큽니다");
+            } else {
+                alert("두 수가 같습니다");
+            }
+        }
+
+
+    </script>
+</head>
+
+<body style="background: orange" <!-- 사용자로 부터 숫자 입력 받기 -->
+    <input type="text" id="num">
+    <input type="button" value="확인" onclick="check()">
+    <br>
+    <input type="text" id="score">
+    <input type="button" value="등급" onclick="grade()">
+    <br>
+    <input type="text" id="score2">
+    <input type="button" value="등급" onclick="grade2()">
+    <br>
+    <input type="text" id="num2">
+    <input type="button" value="약수" onclick="divisor()">
+    <br>
+    <input type="text" id="num3">
+    <input type="button" value="확인" onclick="check2()">
+    <br>
+    <input type="text" id="num4">
+    <input type="button" value="확인" onclick="check3()">
+    <br>
+    <input type="text" id="num5">
+    <input type="button" value="확인" onclick="random()">
+</body>
+
+</html>

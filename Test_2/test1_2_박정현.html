@@ -1,0 +1,32 @@
+<!-- 아래 코드에서 <h1>태그에 마우스 over 이벤트가 발생하면 배경색은 검은색으로 글자색은 흰색으로 스타일 적용되도록 javascript 코드를 완성하시오
+    <h1>Header - 1</h1>
+    <h1>Header - 2</h1>
+    <h1>Header - 3</h1> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script>
+        window.onload = function () {
+            var h1 = document.getElementsByTagName("h1");
+            for (var i = 0; i < h1.length; i++) {
+                h1[i].onmouseover = function () {
+                    this.style.backgroundColor = "black";
+                    this.style.color = "white";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Header - 1</h1>
+    <h1>Header - 2</h1>
+    <h1>Header - 3</h1>
+</body>
+
+</html>
